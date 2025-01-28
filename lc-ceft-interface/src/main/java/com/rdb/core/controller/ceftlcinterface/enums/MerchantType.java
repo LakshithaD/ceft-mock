@@ -41,7 +41,9 @@ public enum MerchantType {
     NPCL_INDIA("6005"), //OIC -32/2023
 
     //LPOPP
-    IRD("4106");
+    IRD("4106"),
+
+    LPOPP("0000");
 
     String code;
 

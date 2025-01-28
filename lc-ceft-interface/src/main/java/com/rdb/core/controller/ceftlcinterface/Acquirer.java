@@ -47,8 +47,8 @@ import java.net.Socket;
                         } else {
                             financialMessage.setResponseCode(ResponseCode.SUCCESS);
                         }
-
-                        messageHelper.sendMessage(message, socket);
+                        financialMessage.setParticulars("0999876567");
+                        messageHelper.sendMessage(financialMessage, socket);
                     } else if (message instanceof ReversalMessage) {
                         System.out.println("REversal recevided --------------------------------------");
                         message.setResponseCode(ResponseCode.SUCCESS);

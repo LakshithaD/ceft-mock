@@ -101,7 +101,8 @@ public class MessageConversionHelper {
 			FinancialMessage finMsg = (FinancialMessage) message;
 			responseMsg.setValue( 38, finMsg.getAuthorizationNumber(), IsoType.ALPHA, 6);
 			responseMsg.setValue(100, finMsg.getReceiverIdentificationCode(), IsoType.LLVAR, 11);
-
+			String eftTlvData = EfvTlvBuilder.buildEfvTlv(finMsg);
+			responseMsg.setValue(120, eftTlvData, IsoType.LLLVAR, 12);
 		}
 		if (message.getResponseCode() != null) {
 			responseMsg.setValue(39, message.getResponseCode().getCode(), IsoType.NUMERIC, 2);

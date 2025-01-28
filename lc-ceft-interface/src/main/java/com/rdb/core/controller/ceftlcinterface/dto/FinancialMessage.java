@@ -142,6 +142,8 @@ public class FinancialMessage extends BaseMessage {
      */
     private TransactionCode transactionCode;
 
+    private String lPOPPTransactionCode;
+
     @Override
     public Boolean isRequest() {
 
